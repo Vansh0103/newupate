@@ -856,28 +856,28 @@ class AntiCheatSystem:
             )
         )
 
-   self.safe_send(
-    chat_id,
-    f"{self.pe('shield')} <b>Advanced Verification</b> {self.pe('verify')}\n"
-    f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-    f"{self.pe('warning')} <b>Action Required!</b>\n"
-    f"{self.pe('info')} Complete verification to unlock your reward.\n\n"
-    f"{self.pe('target')} <b>Checks include:</b>\n"
-    f"{self.pe('arrow')} IP review\n"
-    f"{self.pe('arrow')} Device / session fingerprint checks\n"
-    f"{self.pe('arrow')} Multi-account risk scoring\n\n"
-    f"{self.pe('zap')} <b>Steps:</b>\n"
-    f"{self.pe('play')} Tap the <b>Verify</b> button\n"
-    f"{self.pe('play')} Complete the quick verification\n"
-    f"{self.pe('play')} Return and tap <b>I Verified</b>\n\n"
-    f"{self.pe('money')} <b>Reward Status:</b> Locked 🔒\n"
-    f"{self.pe('arrow')} You can still continue using the bot anytime.\n\n"
-    f"{self.pe('warning')} <b>Important Notice:</b>\n"
-    f"{self.pe('arrow')} <b>Tap /start to begin again,</b>\n"
-    f"{self.pe('arrow')} <b>but if you restart, your referrer may not receive the reward.</b>\n\n"
-    f"━━━━━━━━━━━━━━━━━━━━━━",
-    reply_markup=markup
-)
+        self.safe_send(
+            chat_id,
+            f"{self.pe('shield')} <b>Advanced Verification</b> {self.pe('verify')}\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{self.pe('warning')} <b>Action Required!</b>\n"
+            f"{self.pe('info')} Complete verification to unlock your reward.\n\n"
+            f"{self.pe('target')} <b>Checks include:</b>\n"
+            f"{self.pe('arrow')} IP review\n"
+            f"{self.pe('arrow')} Device / session fingerprint checks\n"
+            f"{self.pe('arrow')} Multi-account risk scoring\n\n"
+            f"{self.pe('zap')} <b>Steps:</b>\n"
+            f"{self.pe('play')} Tap the <b>Verify</b> button\n"
+            f"{self.pe('play')} Complete the quick verification\n"
+            f"{self.pe('play')} Return and tap <b>I Verified</b>\n\n"
+            f"{self.pe('money')} <b>Reward Status:</b> Locked 🔒\n"
+            f"{self.pe('arrow')} You can still continue using the bot anytime.\n\n"
+            f"{self.pe('warning')} <b>Important Notice:</b>\n"
+            f"{self.pe('arrow')} <b>Tap /start to begin again,</b>\n"
+            f"{self.pe('arrow')} <b>but if you restart, your referrer may not receive the reward.</b>\n\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━",
+            reply_markup=markup
+        )
 
     # ----------------------------
     # Admin panel
