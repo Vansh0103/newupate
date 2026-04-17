@@ -132,19 +132,31 @@ def notify_verification_result(user_id: int, success: bool):
     if success:
         msg = (
             "✅ <b>Verification complete!</b>\n\n"
-            "🎉 Welcome! Your account is ready to use now.\n"
-            "If something glitched, the manual verify button is still available in the bot.\n\n"
-            f"👉 https://t.me/{BOT_USERNAME}"
+            "🎉 Welcome! Your account is ready to use now! ✨🚀\n"
+            "💰 Your verification was successful.\n"
+            "🎁 Just click on the button below to continue and receive your welcome bonus! 🔥\n\n"
+            "👉 If something glitched, the manual verify button is still available below."
         )
+        keyboard = {
+            "inline_keyboard": [[
+                {"text": "✅ I Verified", "callback_data": "check_ip_verified"}
+            ]]
+        }
+        return send_bot_message(user_id, msg, reply_markup=keyboard)
     else:
         msg = (
-            "✅ <b>Welcome!</b>\n\n"
+            "⚠️ <b>Welcome! Unfortunately, your verification has failed, but you can still use the bot. Click the button below to continue.</b>\n\n"
             "You can still use the bot even though IP verification failed.\n"
             "Your referrer will not receive the referral bonus for this verification.\n"
             "If something glitched, the manual verify button is still available in the bot.\n\n"
-            f"👉 https://t.me/{BOT_USERNAME}"
+            "Fake and same IP referrals are not available."
         )
-    return send_bot_message(user_id, msg)
+        keyboard = {
+            "inline_keyboard": [[
+                {"text": "🚀 Continue to Bot", "callback_data": "/start"}
+            ]]
+        }
+        return send_bot_message(user_id, msg, reply_markup=keyboard)
 
 
 def get_real_ip():
