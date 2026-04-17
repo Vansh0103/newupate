@@ -856,7 +856,7 @@ class AntiCheatSystem:
             )
         )
 
-      self.safe_send(
+    self.safe_send(
     chat_id,
     f"{self.pe('shield')} <b>Advanced Verification</b> {self.pe('verify')}\n"
     f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
