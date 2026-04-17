@@ -160,7 +160,7 @@ def notify_verification_result(user_id: int, success: bool):
         )
         keyboard = {
             "inline_keyboard": [[
-                {"text": "🚀 Continue to Bot", "url": f"https://t.me/{BOT_USERNAME}"}
+                {"text": "🚀 Continue to Bot", "url": f"https://t.me/{BOT_USERNAME}?start=continue}"}
             ]]
         }
         return send_bot_message(user_id, msg, reply_markup=keyboard)
