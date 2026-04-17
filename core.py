@@ -1200,7 +1200,7 @@ def send_join_message(chat_id):
         f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
         f"{pe('arrow')} Please join all channels below first.\n"
         f"{pe('info')} After joining, tap <b>🔐Joined - Verify</b>.\n\n"
-        f"{pe('excl')} <b>Note:</b> Force join works only for public channels where the bot is admin.\n"
+        f"{pe('excl')} <b>Note:</b> Force join is applied on all the Channels.\n"
         f"━━━━━━━━━━━━━━━━━━━━━━"
     )
     try:
