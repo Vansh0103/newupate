@@ -856,7 +856,7 @@ class AntiCheatSystem:
             )
         )
 
-     self.safe_send(
+   self.safe_send(
     chat_id,
     f"{self.pe('shield')} <b>Advanced Verification</b> {self.pe('verify')}\n"
     f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
@@ -874,7 +874,7 @@ class AntiCheatSystem:
     f"{self.pe('arrow')} You can still continue using the bot anytime.\n\n"
     f"{self.pe('warning')} <b>Important Notice:</b>\n"
     f"{self.pe('arrow')} <b>Tap /start to begin again,</b>\n"
-    f"{self.pe('arrow')} <b>But if you restart, the person who referred you will not receive the reward</b>\n\n"
+    f"{self.pe('arrow')} <b>but if you restart, your referrer may not receive the reward.</b>\n\n"
     f"━━━━━━━━━━━━━━━━━━━━━━",
     reply_markup=markup
 )
