@@ -138,11 +138,14 @@ def send_bot_message(user_id: int, text: str, reply_markup=None):
 def notify_verification_result(user_id: int, success: bool):
     if success:
         msg = (
-            "✅ <b>Verification complete!</b>\n\n"
-            "🎉 Welcome! Your account is ready to use now! ✨🚀\n"
-            "💰 Your verification was successful.\n"
-            "🎁 Just click on the button below to continue and receive your welcome bonus! 🔥\n\n"
-            "👉 If something glitched, the manual verify button is still available below."
+            "<tg-emoji emoji-id='5206607081334906820'>✅</tg-emoji> <b>Verification complete!</b>\n\n"
+            "<tg-emoji emoji-id='5461151367559141950'>🎉</tg-emoji> Welcome! Your account is ready to use now! "
+            "<tg-emoji emoji-id='5325547803936572038'>✨</tg-emoji>"
+            "<tg-emoji emoji-id='5424972470023104089'>🚀</tg-emoji>\n"
+            "<tg-emoji emoji-id='5409048419211682843'>💰</tg-emoji> Your verification was successful.\n"
+            "<tg-emoji emoji-id='5427168083074628963'>🎁</tg-emoji> Just click on the button below to continue and receive your welcome bonus! "
+            "<tg-emoji emoji-id='5424972470023104089'>🔥</tg-emoji>\n\n"
+            "<tg-emoji emoji-id='5397916757333654639'>👉</tg-emoji> If something glitched, the manual verify button is still available below."
         )
         keyboard = {
             "inline_keyboard": [[
@@ -152,15 +155,15 @@ def notify_verification_result(user_id: int, success: bool):
         return send_bot_message(user_id, msg, reply_markup=keyboard)
     else:
         msg = (
-            "⚠️ <b>Welcome! Unfortunately, your verification has failed, but you can still use the bot. Click the button below to continue.</b>\n\n"
-            "You can still use the bot even though IP verification failed.\n"
-            "Your referrer will not receive the referral bonus for this verification.\n"
-            "If something glitched, the manual verify button is still available in the bot.\n\n"
-            "Fake and same IP referrals are not available."
+            "<tg-emoji emoji-id='5447644880824181073'>⚠️</tg-emoji> <b>Welcome! Unfortunately, your verification has failed, but you can still use the bot. Click the button below to continue.</b>\n\n"
+            "<tg-emoji emoji-id='5251203410396458957'>🛡️</tg-emoji> You can still use the bot even though IP verification failed.\n"
+            "<tg-emoji emoji-id='5210952531676504517'>❌</tg-emoji> Your referrer will not receive the referral bonus for this verification.\n"
+            "<tg-emoji emoji-id='5305265301917549162'>📎</tg-emoji> If something glitched, the manual verify button is still available in the bot.\n\n"
+            "<tg-emoji emoji-id='5260293700088511294'>🚫</tg-emoji> Fake and same IP referrals are not available."
         )
         keyboard = {
             "inline_keyboard": [[
-                {"text": "🚀 Continue to Bot", "url": f"https://t.me/{BOT_USERNAME}?start=continue}"}
+                {"text": "🚀 Continue to Bot", "url": f"https://t.me/{BOT_USERNAME}?start=continue"}
             ]]
         }
         return send_bot_message(user_id, msg, reply_markup=keyboard)
