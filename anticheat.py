@@ -856,27 +856,26 @@ class AntiCheatSystem:
             )
         )
 
-    self.safe_send(
-    chat_id,
-    f"{self.pe('shield')} <b>Advanced Verification</b> {self.pe('verify')}\n"
-    f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-    f"{self.pe('warning')} <b>Action Required!</b>\n"
-    f"{self.pe('info')} Complete the verification to unlock your reward.\n\n"
-    f"{self.pe('target')} <b>Security checks include:</b>\n"
-    f"{self.pe('arrow')} IP review\n"
-    f"{self.pe('arrow')} Device and session fingerprint checks\n"
-    f"{self.pe('arrow')} Multi-account risk scoring\n\n"
-    f"{self.pe('zap')} <b>How it works:</b>\n"
-    f"{self.pe('play')} Tap the <b>Verify</b> button\n"
-    f"{self.pe('play')} Complete the quick check\n"
-    f"{self.pe('play')} Come back and tap <b>I Verified</b>\n\n"
-    f"{self.pe('money')} <b>Reward Status:</b> Locked {self.pe('lock')}\n"
-    f"{self.pe('arrow')} You can still continue using the bot anytime.\n"
-    f"{self.pe('play')} Just tap <b>/start</b> to begin again.\n"
-    f"{self.pe('warning2')} <b>Note:</b> If you use <b>/start</b> directly, your inviter cannot receive the bonus {self.pe('rocket')}\n\n"
-    f"━━━━━━━━━━━━━━━━━━━━━━",
-    reply_markup=markup
-)
+        self.safe_send(
+            chat_id,
+            f"{self.pe('shield')} <b>Advanced Verification</b> {self.pe('verify')}\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{self.pe('warning')} <b>Action Required!</b>\n"
+            f"{self.pe('info')} Complete verification to unlock your reward.\n\n"
+            f"{self.pe('target')} <b>Checks include:</b>\n"
+            f"{self.pe('arrow')} IP review\n"
+            f"{self.pe('arrow')} device/session fingerprint checks\n"
+            f"{self.pe('arrow')} multi-account risk scoring\n\n"
+            f"{self.pe('zap')} <b>Steps:</b>\n"
+            f"{self.pe('play')} Tap verify button\n"
+            f"{self.pe('play')} Complete quick check\n"
+            f"{self.pe('play')} Return and tap <b>I Verified</b>\n\n"
+            f"{self.pe('money')} <b>Reward Status:</b> Locked 🔒\n"
+            f"{self.pe('arrow')} You can still continue using the bot anytime.\n"
+            f"{self.pe('play')} Just tap /start to begin again but if you direct /start Your Inviter Cant Recives The Bonus 🚀" 
+            f"━━━━━━━━━━━━━━━━━━━━━━",
+            reply_markup=markup
+        )
 
     # ----------------------------
     # Admin panel
