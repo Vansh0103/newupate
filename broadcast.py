@@ -1,25 +1,3 @@
-"""
-broadcast_system.py
-═══════════════════
-Advanced Telegram Broadcast System — fully rewritten & bug-free.
-
-Supported broadcast types
-─────────────────────────
-  text · photo · video · document · animation · audio · voice · sticker
-  video_note · poll · location · contact · copy (forward any message)
-
-Extra features
-──────────────
-  • Inline-button builder (URL + callback_data, multi-row)
-  • Per-user retry logic with configurable attempts & delay
-  • Flood-control aware  (catches RetryAfter and sleeps)
-  • Live progress updates during send (every N users)
-  • HTML + MarkdownV2 parse-mode selection
-  • Admin-only guard on every entry point
-  • Clean state-machine with safe transitions
-  • Full logging via optional log_admin_action callback
-"""
-
 from __future__ import annotations
 
 import json
